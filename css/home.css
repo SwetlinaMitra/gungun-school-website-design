@@ -1,22 +1,29 @@
 /* Add a black background color to the top navigation */
 .topnav {
-  background-color: #333;
   overflow: hidden;
+  background-color: #333;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  padding: 2px;
+}
+.main {
+  margin-top: 30px; /* Add a top margin to avoid content overlay */
 }
 
 /* Style the links inside the navigation bar */
 body {
   border: 0px;
   margin: 0px;
+  font-family: "Poppins", sans-serif;
 }
 .topnav a {
   float: left;
+  display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 20px 25px;
-  border: #333;
+  padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
 }
 
 /* Change the color of links on hover */
@@ -187,10 +194,10 @@ h6 {
 }
 
 .lineleft {
+  display: inline-block;
   width: 34%;
   height: 47px;
   border-bottom: 2px solid #0c0c0c;
-  position: absolute;
   top: -5px;
 }
 .ml-lg-5,
@@ -203,8 +210,8 @@ h6 {
   width: 34%;
   height: 47px;
   border-bottom: 2px solid #0f100f;
-  position: absolute;
   top: -5px;
+  float: inline-start;
 }
 .ml-lg-3,
 .mx-lg-3 {
@@ -213,8 +220,10 @@ h6 {
 
 .project-blocks .column {
   float: left;
-  width: 33.33%;
-  padding: 5px;
+  width: 30%;
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 20px;
 }
 
 /* Clearfix (clear floats) */
@@ -225,7 +234,7 @@ h6 {
 }
 .project-blocks img {
   width: 100%;
-  height: 50%;
+  height: 70%;
 }
 .project-content {
   padding: 20px;
@@ -234,55 +243,124 @@ h6 {
 }
 
 /*Footer*/
-
-.footer form {
-  border: 3px solid #f1f1f1;
-  font-family: Arial;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+body {
+  /*line-height: 1.5;*/
+  font-family: "Poppins", sans-serif;
 }
-
-.footer .container {
-  padding: 20px;
-  background-color: #f1f1f1;
-}
-.footer {
-  height: 80%;
-}
-.footer ul li {
-  padding: 20px;
-  margin: 20px;
-  font-size: 30px;
-}
-li {
-  text-align: right;
-}
-
-.footer input[type="text"],
-input[type="submit"] {
-  width: 100%;
-  padding: 12px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
-
-.footer input[type="checkbox"] {
-  margin-top: 16px;
+.container {
+  max-width: 1170px;
+  margin: auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+ul {
+  list-style: none;
+}
+.footer {
+  background-color: #24262b;
+  padding: 40px 0;
+}
+.footer-col {
+  width: 25%;
+  padding: 0 15px;
+}
+.footer-col h4 {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+.footer-col h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover {
+  color: #ffffff;
+  padding-left: 8px;
 }
 
-input[type="submit"] {
-  background-color: #04aa6d;
+/*What's New*/
+.wn-blocks .container {
+  position: relative;
+  width: 100%;
+}
+
+.wn-blocks .image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.wn-blocks .overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #008cba;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: 0.5s ease;
+}
+
+.wn-blocks .container:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+.wn-blocks .text {
   color: white;
-  border: none;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
-
-.footer input[type="submit"]:hover {
-  opacity: 0.8;
+/*.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
 }
-.socialmedia-links,
-.list-links {
-  width: 30%;
-}
-.newsletter-form {
-  width: 40%;
-}
+.footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: #ffffff;
+}*/

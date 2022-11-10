@@ -1,7 +1,7 @@
 /* Add a black background color to the top navigation */
 .topnav {
   overflow: hidden;
-  background-color: #333;
+  background-color: #04aa6d;
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
@@ -60,7 +60,7 @@ ul {
   display: none;
 }
 .mySlides img {
-  height: 400px;
+  height: 600px;
 }
 
 /* Next & previous buttons */
@@ -101,6 +101,9 @@ ul {
   bottom: 8px;
   width: 100%;
   text-align: center;
+}
+.mySlides .text {
+  background-color: #04aa6d;
 }
 
 /* Number text (1/3 etc) */
@@ -326,7 +329,7 @@ ul {
   bottom: 100%;
   left: 0;
   right: 0;
-  background-color: #008cba;
+  background-color: #04aa6d;
   overflow: hidden;
   width: 100%;
   height: 0;

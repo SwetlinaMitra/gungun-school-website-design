@@ -6,6 +6,7 @@
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
   padding: 2px;
+  z-index: 9999;
 }
 .main {
   margin-top: 30px; /* Add a top margin to avoid content overlay */
